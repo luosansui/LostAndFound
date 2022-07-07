@@ -26,10 +26,11 @@
 ### 部分页面展示
 
 ![首页](./image/page-1.png)
-![选项](./image/page-2.png)
-![表单](./image/page-3.png)
-![用户](./image/page-4.png)
-![开发者](./image/page-5.png)
+![搜索](./image/page-2.png)
+![选项](./image/page-3.png)
+![表单](./image/page-4.png)
+![用户](./image/page-5.png)
+![开发者](./image/page-6.png)
 
 # 数据库设计
 

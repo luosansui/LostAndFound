@@ -1,0 +1,27 @@
+<!--pages/about/index.wxml-->
+<view class="mp-info">
+  <view class="mp-info-logo">
+    <image mode="widthFix" src="https://www.shmtu.edu.cn/sites/default/files/logo.png"></image>
+  </view>
+  <view class="mp-info-text">上海海事大学</view>
+  <view class="mp-info-ver">版本：1.0</view>
+</view>
+<!-- 选项 -->
+<view class="main-list">
+  <view class="list">
+    <ul>
+      <li>
+        <navigator hover-class="none" url="/pages/agreement/index">
+          <image mode="heightFix" src="../../icon/link.svg"></image>
+          <text>用户协议</text>
+        </navigator>
+      </li>
+      <li>
+        <navigator hover-class="none" url="/pages/developer/index">
+          <image mode="heightFix" src="../../icon/user_about.svg"></image>
+          <text>开发者</text>
+        </navigator>
+      </li>
+    </ul>
+  </view>
+</view>

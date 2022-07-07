@@ -1,0 +1,39 @@
+<!--pages/developer/index.wxml-->
+<swiper class="author-list">
+  <swiper-item wx:for="{{ info }}" wx:key="index" class="author-info flex">
+    <view class="author-card">
+      <view class="card-img">
+        <image mode="widthFix" src="{{item.image}}"></image>
+      </view>
+      <view class="card-nickname">
+        <text>{{item.name}}</text>
+      </view>
+      <view class="card-describe">
+        <ul>
+          <li>
+            <image mode="widthFix" src="../../icon/author_school.svg"></image>
+            <text>{{item.school}}</text>
+          </li>
+          <li>
+            <image mode="widthFix" src="../../icon/author_class.svg"></image>
+            <text>{{item.class}}</text>
+          </li>
+          <li wx:if="{{item.sentence}}">
+            <image mode="widthFix" src="../../icon/author_sign.svg"></image>
+            <text>{{item.sentence}}</text>
+          </li>
+          <li>
+            <image mode="widthFix" src="../../icon/author_work.svg"></image>
+            <text>{{item.work}}</text>
+          </li>
+        </ul>
+      </view>
+      <view wx:if="{{item.link}}" class="card-btn flex">
+      <button size="mini" data-id="{{item.link}}" hover-class="none" bindtap="copyLink">
+      <text>联系我</text>
+      <image mode="heightFix" src="../../icon/author_link.svg"></image>
+      </button>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

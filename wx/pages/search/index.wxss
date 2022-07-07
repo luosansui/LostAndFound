@@ -1,0 +1,37 @@
+/* pages/search/index.wxss */
+page{
+  background-color: #F2F3F3;
+}
+.recommend{
+  height: 500rpx;
+  padding: 30rpx 20rpx 0;
+}
+.recommend-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.recommend-title>text{
+  font-size: larger;
+  color: #333;
+}
+.recommend-title>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.recommend-title-discover{
+  margin-top: 28rpx;
+}
+/*选项纸片*/
+.chip-chips{
+  background-color: unset;
+}
+.chip-chips>text{
+  margin: 15rpx 30rpx 10rpx 0rpx;
+  background-color: #fff;
+  color: #666;
+}
+.tab-main-chip{
+  box-shadow: unset;
+}

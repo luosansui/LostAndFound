@@ -1,0 +1,42 @@
+<!--pages/search/index.wxml-->
+<!--搜索框-->
+<view class="index-search flex">
+  <view class="search-main">
+    <view class="search-main-icon">
+      <image class="img" src="../../icon/search.svg"></image>
+    </view>
+    <view class="search-main-input">
+      <input model:value="{{value}}" focus="true" type="text" placeholder="一卡通" />
+    </view>
+    <view class="search-main-btn">
+      <text bindtap="searchKeyWord" class="flex">搜索</text>
+    </view>
+  </view>
+</view>
+<!-- 搜索推荐 -->
+<view class="recommend">
+  <view class="recommend-title">
+    <text>历史搜索</text>
+    <image bindtap="deleteSearch" mode="heightFix" src="../../icon/search_delete.svg"></image>
+  </view>
+  <view class="recommend-chip">
+    <!-- 选项纸片-历史 -->
+    <view class="tab-main-chip">
+      <view class="chip-chips" bindtap="searchKeyWord">
+        <text wx:for="{{ local }}" wx:key="title" mark:id="{{ item }}" >{{ item }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="recommend-title recommend-title-discover">
+    <text>搜索发现</text>
+    <image bindtap="toggleFind" mode="widthFix" src="../../icon/search_eye{{ find ? '':'_close' }}.svg"></image>
+  </view>
+  <view class="recommend-chip">
+    <!-- 选项纸片-发现 -->
+    <view hidden="{{ !find }}" class="tab-main-chip">
+      <view bindtap="searchKeyWord" class="chip-chips">
+        <text wx:for="{{ net }}" wx:key="title" mark:id="{{ item.name }}" >{{ item.name }}</text>
+      </view>
+    </view>
+  </view>
+</view>

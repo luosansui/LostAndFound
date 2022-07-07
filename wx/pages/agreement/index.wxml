@@ -1,0 +1,2 @@
+<!--pages/agreement/index.wxml-->
+<rich-text nodes="{{nodes}}"></rich-text>

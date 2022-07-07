@@ -1,0 +1,29 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<view class="tab-bar" style="{{show ? 'background-color: #FBBD08;':''}}">
+  <view hidden="{{show}}" class="tab-bar-border"></view>
+  <block wx:for="{{list}}" wx:key="index">
+    <view wx:if="{{item.isSpecial}}" class="tab-bar-item" >
+      <view class="special-image" style="{{show ? 'background-color: #EFEFEF;border-top-color: #EFEFEF;':''}}" data-path="{{item.pagePath}}" data-click="{{ item.isSpecial || false }}" data-index="{{index}}" bindtap="switchTab">
+        <image animation="{{animationData}}" class="special-image-pic" mode="aspectFit" src="{{show ? item.iconPathClose : item.iconPath}}"></image>
+      </view>
+      <view style="color: {{selected === index ? selectedColor : color}}" class="special-text tab-text">{{item.text}}</view>
+    </view>
+    <view wx:else hidden="{{show}}" class="tab-bar-item" data-path="{{item.pagePath}}" data-click="{{ item.isSpecial }}" data-index="{{index}}" bindtap="switchTab">
+      <image class="item-image" mode="aspectFit" data-g="{{selected}}{{index}}" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+      <view class="tab-text" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+    </view>
+  </block>
+</view>
+<!-- submit -->
+<page-container show="{{show}}" z-index="-1" duration="{{pageTime}}" bindenter="onEnter" bindleave="onLeave">
+  <view class="select-page">
+   <!--  <view bindtap="clickBtnLost" class="btn-lost">
+      <image class="custom-tab-var-btn-image" src="/icon/btn_lost.svg"></image>
+      <text>寻物启事</text>
+    </view> -->
+    <view bindtap="clickBtnFound" class="btn-found">
+      <image class="custom-tab-var-btn-image" src="/icon/btn_found.svg"></image>
+      <text>失物招领</text>
+    </view>
+  </view>
+</page-container>

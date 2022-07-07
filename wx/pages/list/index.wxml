@@ -1,0 +1,35 @@
+<!--pages/首页-->
+<scroll-view class="scroll" scroll-y="true" bindscrolltolower="goBtm" enhanced="true" show-scrollbar="{{false}}">
+  <!-- 主内容 -->
+  <view class="index-tab">
+    <!-- 选项卡 -->
+    <view class="tab-main-tab" bindtap="tabSelect">
+      <view wx:for="{{ info }}" wx:key="title" class="tab-tabs flex {{index == activeTab ? 'activeTab':''}}" mark:tabi="{{index}}">{{ item.branch }}
+      </view>
+    </view>
+    <!-- card -->
+    <view class="tab-main-content">
+      <block wx:for="{{ list[activeTab] }}" wx:key="index">
+        <view hidden="{{ activeChip && item.name !== info[activeTab].tip[activeChip] }}" class="content-card">
+          <view class="card-img">
+            <image class="img" mode="heightFix" src="{{ item.image[0] }}">
+            </image>
+          </view>
+          <view class="card-cont">
+            <view class="cont-title text-over">
+              <text>拾取地点：{{ item.find.name }}</text>
+            </view>
+            <view class="cont-describe text-over">
+              <text>{{ item.name }}{{ item.describe ? ' : ' + item.describe : '' }}</text>
+            </view>
+            <view class="cont-bottom">
+              <text>{{ item.time }}</text>
+              <text data-id="{{ item.id }}" data-index="{{ index }}" bindtap="goDetails">详情</text>
+            </view>
+          </view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</scroll-view>

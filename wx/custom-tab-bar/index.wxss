@@ -1,0 +1,97 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 96rpx;
+  background: white;
+  display: flex;
+  padding-bottom: 50rpx;
+}
+
+.tab-bar-border {
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2rpx;
+  transform: scaleY(0.5);
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-bar-item .item-image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.tab-bar-item .special-image {
+  position: absolute;
+  top: -42rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border-top: 2rpx solid #f2f2f3;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+.tab-bar-item .special-image .special-image-pic {
+  width: 100%;
+  height: 100%;
+}
+
+.tab-bar-item .tab-text {
+  margin-top: 4rpx;
+  font-weight: 600;
+}
+
+.tab-bar-item .special-text {
+  margin-top: 44rpx
+}
+
+.tab-bar-item .tab-text {
+  font-size: 10px;
+}
+
+.select-page{
+  background-color: #FBBD08;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn-lost,.btn-found{
+  width: 340rpx;
+  height: 340rpx;
+  background-color: #FEFEFE;
+  border-radius: 24rpx;
+  box-shadow: 4rpx 8rpx 8rpx rgba(0,0,0,0.4) ;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+}
+.btn-lost{
+  margin-bottom: 60rpx;
+}
+.btn-found{
+  margin-bottom: 300rpx;
+}
+.custom-tab-var-btn-image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 30rpx;
+}

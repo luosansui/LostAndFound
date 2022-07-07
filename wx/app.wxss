@@ -1,0 +1,183 @@
+/**app.wxss**/
+page{
+  margin: 0;
+  padding: 0;
+}
+/*弹性布局*/
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*index + user - scroll-view*/
+.scroll{
+  height: calc(100vh - 144rpx);
+}
+/*图像*/
+.img{
+  width: 100%;
+  height: 100%;
+}
+/*user + setting + about - 设置选项*/
+.main-list{
+  padding: 30rpx 20rpx 10rpx;
+}
+.list{
+  background-color: #fff;
+  border-radius: 14rpx;
+  padding: 10rpx 30rpx;
+}
+.list>ul{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.list>ul>li>navigator,.list>ul>li>._navigator{
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  border-bottom: 2rpx solid #efefef;
+}
+.list>ul>li:last-child>navigator,.list>ul>li:last-child>._navigator{
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.list>ul>li image{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 18rpx;
+}
+/*message + user - 用户列表*/
+.info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46rpx;
+  height: 100rpx;
+}
+.info-main{
+ display: flex;
+}
+.info-img{
+  width: 100rpx;
+  border-radius: 100rpx;
+  overflow: hidden;
+  margin-right: 26rpx;
+}
+.info-describe{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.describe-name>text{
+  font-size: larger;
+  font-weight: bold;
+}
+/*message + user - 小红点*/
+.message-dot{
+  background-color: #EE0000;
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 100rpx;
+  color: #fff;
+  font-size: small;
+}
+/*居中*/
+.son-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*index + search - 搜索框*/
+.index-search{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+}
+.search-main{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  border: 2rpx solid #FBBD08;
+  border-radius: 100rpx;
+  overflow: hidden;
+  background-color: #F5F5F5;
+  color: #333;
+}
+.search-main-icon{
+  flex: 1;
+  box-sizing: border-box;
+  padding: 14rpx;
+}
+
+.search-main-input{
+  flex: 10;
+}
+.search-main-input>input{
+  height: 100%;
+}
+.search-main-btn{
+  flex: 2;
+}
+.search-main-btn>text{
+  background-color: #FBBD08;
+  color: #111;
+  border-radius: 100rpx;
+  height: 100%;
+  width: 100%;
+}
+
+/*index + search - 选项纸片*/
+.tab-main-chip{
+  box-shadow: 0 0 8rpx rgba(0,0,0,0.06);
+}
+.chip-chips{
+  background-color: #fff;
+  padding: 15rpx 0 12rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chip-chips>text{
+  color: #7f7f7f;
+  background-color: #EFEFEF;
+  display: inline-block;
+  padding: 10rpx 22rpx;
+  border-radius: 100rpx;
+  margin: 15rpx 15rpx 10rpx 20rpx;
+}
+/*session + details - 消息栏*/
+.bar-message{
+  height: 8%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.bar-input{
+  display: flex;
+  height: 64rpx;
+  padding: 14rpx 20rpx 0;
+}
+.bar-input>image{
+  margin-top: 4rpx;
+  width: 56rpx;
+  height: 56rpx;
+}
+.bar-input>input{
+  flex: 1;
+  background-color: #EFEFEF;
+  height: 100%;
+  margin: 0 20rpx 14rpx;
+  border-radius: 16rpx;
+  padding: 0 20rpx;
+}
+.bar-input>text{
+  padding: 0 26rpx;
+  background-color: #fff;
+  line-height: 64rpx;
+  text-align: center;
+  border-radius: 100rpx;
+  color: #feffff;
+  background-color: #FBBD08;
+  box-shadow: 4rpx 6rpx 8rpx rgba(251, 189, 8, 0.25);
+}

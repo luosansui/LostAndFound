@@ -1,0 +1,89 @@
+/* pages/message/index.wxss */
+page{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.search{
+  background-color: #F5F5F5;
+  border-radius: 100rpx;
+  position: relative;
+}
+.search>input{
+  height: 70rpx;
+  padding: 0 40rpx;
+}
+.input-place{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: flex-end;
+}
+.input-place>image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}
+.input-place>text{
+  color: #888;
+}
+/*信息列表*/
+.mess-list{
+  height: 500rpx;
+  padding: 20rpx 0;
+}
+
+.mess-list>ul>li{
+  display: block;
+  padding: 20rpx 0;
+}
+
+/*mess*/
+.mess{
+  margin-bottom: unset;
+}
+.mess-flex-1{
+  flex: 1;
+}
+.mess-info-describe{
+  position: relative;
+}
+.describe-name>text{
+  font-weight: bold;
+  font-size: medium;
+}
+.describe-mess{
+  color: #888;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.describe-mess>text{
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*时间*/
+.info-date{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #888;
+}
+.info-date .message-dot{
+  width: 42rpx;
+  height: 42rpx;
+  font-size: medium;
+}
+.mess-dot{
+  background-color: #FBBD08;
+  padding: 4rpx 8rpx;
+  border-radius: 8rpx;
+  font-size: small;
+  color: #fff;
+}

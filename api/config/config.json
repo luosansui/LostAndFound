@@ -1,0 +1,34 @@
+{
+    "db": {
+        "database":"laf",
+        "username":"luosansui",
+        "password":"password",
+        "dialect":"mysql",
+        "timezone": "+08:00",
+        "pool": {
+            "max": 10,
+            "min": 2,
+            "acquire": 30000,
+            "idle": 10000
+          }
+    },
+    "wx": {
+        "appid": "wx_appid",
+        "secret": "wx_secret"
+    },
+    "jwt": {
+        "user":{
+            "payload": {
+                "issuer": "luosansui",
+                "audience": "wechat",
+                "subject": "userid"
+            },
+            "secret": "secret",
+            "option": {
+                "algorithm" : "HS256",
+                "expiresIn": "14d",
+                "notBefore": "0"
+            }
+        }
+    }
+}

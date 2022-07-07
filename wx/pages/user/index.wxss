@@ -1,0 +1,80 @@
+/* pages/user/index.wxss */
+/*用户信息*/
+page{
+  background-image: linear-gradient(#fff 0%,#fcfcfc 20%,#f6f6f6 30%,#F3F3F3 100%);
+}
+.main-user{
+  padding: 60rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+/*app.wxss*/
+.describe-coin{
+  background-color: #FFF1CA;
+  color: #FFAC33;
+  display: flex;
+  align-items: center;
+  padding: 5rpx 16rpx 5rpx 10rpx;
+  border-radius: 12rpx;
+  font-size: small;
+}
+.describe-coin>image{
+  height: 32rpx;
+  width: 32rpx;
+  margin-right: 8rpx;
+}
+.info-more{
+  color: #666;
+  height: min-content;
+  display: flex;
+  align-items: center;
+}
+.info-more>image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 10rpx;
+}
+.option{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20rpx;
+}
+.option>view{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 25%;
+}
+
+.option>view:not(:last-child)::after{
+  content: '';
+  position: absolute;
+  width: 2rpx;
+  height: 50%;
+  background-color: #EFEFEF;
+  right: 0;
+  bottom: 0;
+}
+.option>view>text{
+  word-break: keep-all;
+}
+.option>view>text:first-child{
+  font-size: larger;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10rpx;
+}
+.option>view>text:last-child{
+  color: #666;
+  font-size: small;
+}
+.list>ul>li:nth-child(2) text{
+  padding-bottom: 4rpx;
+}
+.flex-space-between{
+  display: flex;
+  justify-content: space-between;
+}
+

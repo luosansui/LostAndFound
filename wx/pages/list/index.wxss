@@ -1,0 +1,4 @@
+@import "/pages/index/index.wxss";
+.tab-main-tab{
+  margin-bottom: 26rpx;
+}

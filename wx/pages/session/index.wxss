@@ -1,0 +1,50 @@
+/* pages/session/index.wxss */
+page{
+  height: 100%;
+  background-color: #EAEDF3;
+}
+.content-message{
+  height: 92%;
+}
+
+.message-card{
+  display: flex;
+  margin: 26rpx 20rpx 10rpx;
+}
+.content-message view:first-child{
+  padding-top: 30rpx;
+}
+.content-message view:last-child{
+  height: 40rpx;
+}
+.message-card>image{
+  width: 80rpx;
+  height: 80rpx;
+  min-width: 80rpx;
+  min-height: 80rpx;
+  border-radius: 50%;
+}
+.message-card>text{
+  display: flex;
+  max-width: calc(100% - 160rpx - 48rpx);
+  height: min-content;
+  line-height: 44rpx;
+  margin: 11rpx 24rpx 0 24rpx;
+  word-break: break-all;
+  border-radius: 22rpx;
+  box-sizing: border-box;
+  padding: 12rpx 20rpx;
+  font-size: large;
+}
+
+.left>text{
+  color: #000;
+  background-color: #fff;
+}
+.right{
+  flex-direction: row-reverse;
+}
+.right>text{
+  color: #FEFFFF;
+  background-color: #FBBD08;
+}

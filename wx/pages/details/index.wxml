@@ -1,0 +1,75 @@
+<!--pages/details/index.wxml-->
+<scroll-view class="details-content" refresher-enabled="true" refresher-triggered="{{ refreshState }}" bindrefresherrefresh="refresh" scroll-y="true">
+  <view class="content-main">
+    <!-- 用户信息 -->
+    <view class="details-user-info">
+      <view class="info">
+        <!-- 用户信息 -->
+        <view class="info-main">
+          <!-- 用户头像 -->
+          <view class="info-img">
+            <image class="img" src="{{ allData.user.image }}"></image>
+          </view>
+          <!-- 用户描述 -->
+          <view class="mess-info-describe">
+            <view class="describe-name">
+              <text>{{ uallData.user.name }}</text>
+              <image src="../../icon/user_coin.svg"></image>
+              <text>{{ allData.user.coin }}</text>
+            </view>
+            <view class="describe-mess">
+              <text>寻找失主中...</text>
+            </view>
+          </view>
+        </view>
+        <!-- 举报 -->
+        <view class="details-tip">
+          <text bindtap="goReport" data-id="{{ allData.info.id }}">举报</text>
+        </view>
+      </view>
+    </view>
+    <!-- 物品特征 -->
+    <view class="details-object-features">
+
+      <view wx:for="{{ label }}" wx:key="index">
+        <view class="details-object-features-name">
+          <image mode="widthFix" src="../../icon/details_book.svg"></image>
+          <text>{{ item }}：</text>
+        </view>
+        <text>{{ allData.labelData[index] }}</text>
+      </view>
+
+      <view wx:if="{{ false }}" class="details-object-features-source">
+        <view class="details-object-features-name">
+          <image mode="widthFix" src="../../icon/details_book.svg"></image>
+          <text>拾取人：</text>
+        </view>
+        <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202107%2F22%2F20210722052213_5e9f0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641828965&t=876ecb14ad26dcc77a42f65741bb8168"></image>
+        <text>洛三岁</text>
+      </view>
+
+    </view>
+    <!-- 物品描述 -->
+    <view class="details-object-describe">
+      <text>{{ allData.info.describe }}</text>
+    </view>
+    <!-- 物品配图 -->
+    <view class="details-object-image">
+      <block wx:for="{{ allData.info.image }}" wx:key="index">
+        <image mode="widthFix" src="{{ item }}"></image>
+      </block>
+    </view>
+    <!-- 按钮组 -->
+    <view class="details-object-button">
+      <view bindtap="claimObj">
+        <image src="../../icon/details_btns_triangle.svg"></image>
+        <text>前往放置地点</text>
+      </view>
+      <view>
+        <button size="mini" plain="true" open-type="share" hover-class="none">
+          <image src="../../icon/details_btns_share.svg"></image>
+        </button>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,67 @@
+<!--pages/user/index.wxml-->
+<scroll-view class="scroll" refresher-enabled="true" refresher-triggered="{{ refreshState }}" bindrefresherrefresh="refresh" scroll-y="true">
+  <view class="main-user">
+    <view class="info">
+      <!-- 用户信息 -->
+      <view class="info-main">
+        <!-- 用户头像 -->
+        <view class="info-img">
+          <image class="img" src="{{info.image}}"></image>
+        </view>
+        <!-- 用户描述 -->
+        <view class="info-describe">
+          <view class="describe-name">
+            <text>{{info.name}}</text>
+          </view>
+          <view class="describe-coin">
+            <image mode="heightFix" src="../../icon/user_coin.svg"></image>
+            <text>花瓣：</text><text>{{info.coin}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 个人资料按钮 -->
+      <view class="info-more">
+        <text bindtap="goInfo">个人资料</text>
+        <image mode="heightFix" src="../../icon/user_more_right.svg"></image>
+      </view>
+    </view>
+    <!-- 其他选项 -->
+    <view class="option" bindtap="goList">
+      <view wx:for="{{ labels }}" wx:key="index" mark:id="{{ index }}">
+        <text>{{count[ index ]}}</text>
+        <text>{{ item }}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 选项 -->
+  <view class="main-list">
+    <view class="list">
+      <ul>
+        <li>
+          <navigator url="/pages/message/index" hover-class="none" class="flex-space-between">
+            <view class="flex">
+              <image mode="heightFix" src="../../icon/user_message.svg"></image>
+              <text>信息</text>
+            </view>
+            <view hidden="{{true}}" class="message-dot flex">
+              <text>8</text>
+            </view>
+          </navigator>
+        </li>
+       
+        <li>
+          <navigator url="/pages/setting/index" hover-class="none">
+            <image mode="heightFix" src="../../icon/user_setting.svg"></image>
+            <text>设置</text>
+          </navigator>
+        </li>
+        <li>
+          <navigator url="/pages/about/index" hover-class="none">
+            <image mode="heightFix" src="../../icon/user_about.svg"></image>
+            <text>关于我们</text>
+          </navigator>
+        </li>
+      </ul>
+    </view>
+  </view>
+</scroll-view>

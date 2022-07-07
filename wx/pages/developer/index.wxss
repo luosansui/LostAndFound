@@ -1,0 +1,82 @@
+/* pages/developer/index.wxss */
+page{
+  background-color: #F3F3F3;
+  height: 100%;
+}
+.author-list{
+  height: 100%;
+}
+
+.author-card{
+  width: 80%;
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 6rpx rgba(0,0,0,0.25);
+  border: 2rpx solid #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 120rpx 0;
+  box-sizing: border-box;
+}
+.card-img{
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.card-img>image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.card-nickname{
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 50rpx;
+}
+.card-describe>ul,.card-describe>ul>li{
+  display: block;
+}
+.card-describe>ul{
+  padding: 0 90rpx;
+  margin-bottom: 66rpx;
+}
+.card-describe>ul>li{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 28rpx;
+  line-height: 50rpx;
+}
+.card-describe>ul>li image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 10rpx 10rpx 0 0;
+}
+
+.card-describe>ul>li:nth-child(4) image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 14rpx;
+}
+.card-describe>ul>li text{
+  flex: 1;
+  font-weight: bold;
+}
+/*按钮*/
+.card-btn button{
+  background-color: #FF8E3D;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.card-btn image{
+  vertical-align: middle;
+}
+.card-btn text{
+  display: inline-block;
+  line-height: 60rpx;
+  margin-right: 4rpx;
+}
+.card-btn image{
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+}

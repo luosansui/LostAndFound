@@ -1,0 +1,162 @@
+/* pages/submit/index.wxss */
+page,.map-page{
+  background-color: #F2F3F3;
+  background-image: linear-gradient(#FBBD08 0%,rgba(251, 189, 8, 0) 66%);
+  height: 100%;
+}
+scroll-view{
+  height: 100%;
+}
+.form-card{
+  margin: 20rpx 20rpx 40rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  font-size: large;
+  color: #888;
+}
+.form-card>ul>li{
+  display: flex;
+  margin-bottom: 20rpx;
+  padding: 16rpx 0;
+  border-bottom: 4rpx solid #D8D8D8;
+  align-items: center;
+}
+.form-card>ul>li>text{
+  word-break: keep-all;
+}
+.form-card>ul>li image{
+  height: 38rpx;
+  width: 38rpx;
+  margin-left: 20rpx;
+}
+.form-card>ul>li:nth-child(3) image{
+  height: 40rpx;
+  width: 40rpx;
+  transform: translateX(8rpx);
+}
+.form-card>ul>li input{
+  flex: 1;
+/*   display: inline-block; */
+  height: 46rpx;
+  line-height: 46rpx;
+  background-color: #fff;
+  padding: 0 4rpx;
+}
+/*校区选择*/
+.campus-select{
+  display: flex;
+  flex-wrap: wrap;
+}
+.campus-select>view{
+  padding: 6rpx 8rpx 6rpx 0;
+  margin-right: 8rpx;
+}
+.campus-select>view>text{
+  word-break: keep-all;
+}
+.campus-select image,.campus-select text{
+  vertical-align: middle;
+}
+.campus-select image{
+  margin-right: 8rpx;
+  margin-left: 4rpx !important;
+  width: 46rpx !important;
+  height: 46rpx !important;
+}
+/*照片上传*/
+.img-card{
+  padding: 22rpx 28rpx;
+  box-sizing: border-box;
+}
+/*上传协议*/
+.img-upload-btn{
+  font-size: small;
+  font-weight: bold;
+  border: 2rpx dashed #B8B8B8;
+}
+.img-upload-btn>label{
+  padding: 14rpx 20rpx;
+  display: block;
+}
+/*上传框*/
+
+.slidedown {
+  height: 193rpx;
+  padding: 14rpx 20rpx;
+}
+.slideup {
+  height: 0;
+  padding: 0;
+}
+.slidedown_unset_height{
+  height: unset;
+}
+
+.img-upload-input{
+  border: 2rpx dashed #B8B8B8;
+  border-top: none;
+  /* padding: 14rpx 20rpx; */
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.2s linear;
+}
+.img-upload-input>view{
+  text-align: center;
+}
+.img-upload-input image{
+  width: 110rpx;
+  height: 110rpx;
+  padding: 0 0 4rpx 12rpx;
+}
+.img-upload-input text{
+  color: #555;
+}
+.choose_img{
+  width: 100% !important;
+  padding: 0 !important;
+}
+/*按钮*/
+.btn-card{
+  padding-top: 24rpx;
+}
+.btn-card>button{
+  border-radius: 100rpx;
+  color: #FEFEFE;
+  background-color: #FBBD08;
+  margin-bottom: 25vh;
+}
+/*地图*/
+.map-page{
+  height: 100vh;
+  position: relative;
+}
+.container-map{
+  width: 100%;
+  height: 100%;
+}
+.container-map map{
+  width: 100%;
+  height: 100%;
+}
+.container-btn{
+  position: absolute;
+  bottom: 150rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.container-btn button{
+  width: 66% !important;
+  background-color: #FBBD08;
+  color: #feffff;
+  box-shadow: 4rpx 2rpx 4rpx rgba(251, 189, 8,.3);
+}
+.container-btn button:first-child{
+  margin-bottom: 24rpx;
+}
+.bom{
+  height: 2rpx;
+}
+

@@ -1,0 +1,41 @@
+<!--pages/message/index.wxml-->
+<!-- 搜索框 -->
+<view class="search">
+  <input disabled="true" type="text" />
+  <view class="input-place">
+    <image src="../../icon/search.svg"></image>
+    <text>搜索</text>
+  </view>
+</view>
+<!-- 信息列表 -->
+<view class="mess-list">
+  <ul>
+    <li wx:for="{{list}}">
+      <view data-index="{{index}}" bindtap="goSession" class="info mess">
+        <!-- 用户信息 -->
+        <view class="info-main mess-flex-1">
+          <!-- 用户头像 -->
+          <view class="info-img">
+            <image class="img" src="{{item.image}}"></image>
+          </view>
+          <!-- 用户描述 -->
+          <view class="mess-flex-1 mess-info-describe">
+            <view class="describe-name">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="describe-mess">
+              <text>{{item.content}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- 时间 -->
+        <view class="info-date">
+          <text>{{ item.time }}</text>
+          <view class="mess-dot flex">
+              <text>收到{{item.count}}条信息</text>
+          </view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>

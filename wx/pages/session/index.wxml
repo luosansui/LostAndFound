@@ -1,0 +1,18 @@
+<!--pages/session/index.wxml-->
+<!-- 消息内容 -->
+<scroll-view class="content-message" scroll-y="{{true}}" scroll-into-view="{{btm}}">
+  <view wx:for="{{lists}}" class="message-card {{ myInfo.id === item.uid_A ? 'right':'left' }}">
+    <image mode="widthFix" src="{{myInfo.id === item.uid_A ? myInfo.image: otherInfo.image }}"></image>
+    <text>{{item.content}}</text>
+  </view>
+  <view id="btm"></view>
+</scroll-view>
+<!-- 消息栏 -->
+<view class="bar-message">
+  <view class="bar-input">
+    <image mode="heightFix" src="../../icon/session_plus.svg"></image>
+    <input type="text" model:value="{{chatVal}}" />
+    <text bindtap="sendChat">发送</text>
+  </view>
+  <view class="bar-btn-content" hidden="{{true}}"></view>
+</view>

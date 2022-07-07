@@ -1,0 +1,80 @@
+<!--pages/submit/index.wxml-->
+<scroll-view scroll-y="{{true}}">
+  <view class="form-card">
+    <ul>
+      <li>
+        <text>当前校区：</text>
+        <view bindtap="selectBranch" class="campus-select">
+          <block wx:for="{{ listArray.branch }}" wx:key="index">
+            <view mark:branchi="{{index}}">
+              <image mode="heightFix" src="{{ listIndex[0] === index ? '../../icon/submit_campus_selected.svg':'../../icon/submit_campus.svg'}}"></image>
+              <text>{{item}}</text>
+            </view>
+          </block>
+        </view>
+      </li>
+      <li>
+        <text>物品名称：</text>
+        <input disabled="true" value="{{ listClick[1] ? listArray.data[listIndex[0]].tip[listIndex[1]]:'' }}" type="text" />
+        <picker bindchange="pickerName" range="{{ listArray.data[listIndex[0]].tip }}">
+          <image mode="heightFix" src="../../icon/submit_list.svg"></image>
+        </picker>
+      </li>
+      
+      <li>
+        <text>拾取地点：</text>
+        <input disabled="true"value="{{ addr['name'] || '' }}" type="text"/>
+        <image bindtap="selectPosition" mode="heightFix" src="../../icon/submit_position.svg"></image>
+      </li>
+
+      <li>
+        <text>放置地点：</text>
+        <input disabled="true" value="{{ listClick[2] ? listArray.data[listIndex[0]].Cp[listIndex[2]].name:'' }}" type="text" />
+        <picker bindchange="pickerLay" range="{{ listArray.data[listIndex[0]].Cp }}" range-key="name">
+          <image mode="heightFix" src="../../icon/submit_list.svg"></image>
+        </picker>
+      </li>
+      <li>
+        <text>拾取时间：</text>
+        <input disabled="true" value="{{time}}" type="text" />
+        <picker bindchange="pickerDate" mode="date" end="{{endDate}}">
+          <image mode="heightFix" src="../../icon/submit_list.svg"></image>
+        </picker>
+      </li>
+      <li>
+        <text>详情信息：</text>
+        <input model:value="{{details}}" type="text" />
+      </li>
+    </ul>
+  </view>
+  <!-- 照片上传 -->
+  <view class="img-card form-card">
+   <view class="img-upload-btn">
+    <label bindtap="checkedUploadImg">
+      <radio color="#FBBD08" checked="{{ checked }}"/>
+      <text>我想通过图片对物品进行描述。我愿意接受图片审核，并保证不会上传任何违规图片</text>
+    </label>
+   </view>
+   <view class="img-upload-input {{ checked ? 'slidedown':'slideup' }} {{ checked && tempFilePath.length > 0 && 'slidedown_unset_height' }}}" bindtap="chooseImage">
+      <block wx:if="{{tempFilePath == false}}">
+        <view>
+          <image mode="widthFix" src="../../icon/submit_img_upload.svg"></image>
+        </view>
+        <view>
+          <text>上传照片</text>
+        </view>
+      </block>
+      <block wx:else>
+        <image class="choose_img" wx:for="{{tempFilePath}}" mode="widthFix" src="{{item.tempFilePath}}"></image>
+      </block>
+    </view>
+
+  </view>
+
+  <!-- 提交 -->
+  <view bindtap="submitInfo" class="btn-card">
+    <button>提交</button>
+  </view>
+  <view class="bom"></view>
+ 
+</scroll-view>

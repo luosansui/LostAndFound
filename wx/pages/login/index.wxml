@@ -1,0 +1,22 @@
+<!--pages/login/index.wxml-->
+
+<view class="bc bottom"></view>
+<view class="bc right"></view>
+<view class="from">
+  <block wx:for="{{ ['学校','校区'] }}" wx:key="index">
+    <view hidden="{{ index === 1 && judgeRegisterData[pickVal[0]] }}">
+      <view class="school">{{ item }}：</view>
+      <picker-view data-id="{{ index }}" bindpickstart="pickerStart" bindpickend="pickerEnd" bindchange="pickerChange" class="pick {{pickscroll[index] ? 'pickScroll':''}}" indicator-class="pick-view">
+        <picker-view-column class="pick-item">
+          <view wx:for="{{ [schoolList,schoolList[pickVal[0]].Sc][index] }}" wx:key="id" wx:for-index="idx" wx:for-item="itemName">{{ itemName.name }}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </block>
+  <button bindtap="submit" class="btn-login" hover-class="none">{{ judgeRegisterData[pickVal[0]] ? '登录':'注册' }}</button>
+  <!-- <picker range="{{ pickscroll ? errorBranch : schoolList[pickVal].Sc }}" range-key="name" value="{{ branchIndex }}" bindtap="pinckBranchStart" bindchange="pinckBranchChange">
+    
+  </picker> -->
+
+</view>
+<!-- 选择校区 -->

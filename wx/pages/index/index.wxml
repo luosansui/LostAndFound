@@ -1,0 +1,72 @@
+<!--pages/首页-->
+<scroll-view refresher-enabled="true" refresher-triggered="{{ refreshState }}" bindrefresherrefresh="refresh" class="scroll" scroll-y="true" bindscrolltolower="goBtm" enhanced="true" show-scrollbar="{{false}}">
+  <!--搜索框-->
+  <view class="index-search flex">
+    <view class="search-main">
+      <view class="search-main-icon">
+        <image class="img" src="../../icon/search.svg"></image>
+      </view>
+      <view class="search-main-input">
+        <input bindtap="goSearch" type="text" placeholder="请输入关键字如“校园卡”" disabled="true" />
+      </view>
+      <view class="search-main-btn">
+        <text class="flex">搜索</text>
+      </view>
+    </view>
+  </view>
+  <!-- 主内容 -->
+  <view class="index-tab">
+    <!-- 选项卡 -->
+    <view class="tab-main-tab" bindtap="tabSelect">
+      <view wx:for="{{ info }}" wx:key="title" class="tab-tabs flex {{index == activeTab ? 'activeTab':''}}" mark:tabi="{{index}}">{{ item.branch }}
+      </view>
+    </view>
+    <!-- 选项纸片 -->
+    <view class="tab-main-chip">
+      <view class="chip-chips {{ activeChipBox ? 'active-chip-chips': '' }}" bindtap="chipSelect">
+        <!-- <text>招领：</text> -->
+        <block wx:for="{{ info[activeTab].tip }}" wx:key="title">
+          <text class="{{ index == activeChip ? 'activeChip':''}}" mark:chipi="{{ index }}">{{ item }}</text>
+        </block>
+      </view>
+      <view class="chip-btn flex" bindtap="chipSlideToggle">
+        <image class="img {{ activeChipBox ? 'rotate': '' }}" src="../../icon/chip-down.svg"></image>
+      </view>
+    </view>
+    <!-- 公告 -->
+    <view class="tab-main-notice">
+      <view class="notice-note">
+        <view class="notice-icon">
+          <image class="img" src="../../icon/notice.svg"></image>
+        </view>
+        <view class="notice-text">
+          <text>公告：{{ info[activeTab].notice }}</text>
+        </view>
+      </view>
+    </view>
+    <!-- card -->
+    <view class="tab-main-content">
+      <block wx:for="{{ list[activeTab] }}" wx:key="index">
+        <view hidden="{{ activeChip && item.name !== info[activeTab].tip[activeChip] }}" class="content-card">
+          <view class="card-img">
+            <image class="img" mode="heightFix" src="{{ item.image[0] }}">
+            </image>
+          </view>
+          <view class="card-cont">
+            <view class="cont-title text-over">
+              <text>拾取地点：{{ item.find.name }}</text>
+            </view>
+            <view class="cont-describe text-over">
+              <text>{{ item.name }}{{ item.describe ? ' : ' + item.describe : '' }}</text>
+            </view>
+            <view class="cont-bottom">
+              <text>{{ item.time }}</text>
+              <text data-id="{{ item.id }}" data-index="{{ index }}" bindtap="goDetails">详情</text>
+            </view>
+          </view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</scroll-view>

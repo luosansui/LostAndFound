@@ -1,0 +1,28 @@
+<!-- 选项 -->
+<view class="main-list">
+    <view class="list">
+    <ul>
+      <li>
+        <view hover-class="none" bindtap="goService" class="_navigator">
+          <image mode="heightFix" src="../../icon/link.svg"></image>
+          <text>联系客服</text>
+        </view>
+      </li>
+      <li>
+      <view hover-class="none" bindtap="goQQ" class="_navigator">
+        <image mode="heightFix" src="../../icon/bug.svg"></image>
+        <text>BUG反馈</text>
+      </view>
+      </li>
+      <li>
+      <view hover-class="none" bindtap="goReserve" class="_navigator">
+        <image mode="heightFix" src="../../icon/user_about.svg"></image>
+        <text>保留功能</text>
+      </view>
+      </li>
+    </ul>
+    </view>
+</view>
+<view class="logout-btn">
+  <view bindtap="exit"class="flex">退出账号</view>
+</view>

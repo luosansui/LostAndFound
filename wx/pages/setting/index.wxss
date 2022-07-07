@@ -1,0 +1,14 @@
+/* pages/setting/index.wxss */
+page{
+  background-color: #F4F4F4;
+}
+.logout-btn{
+  padding: 30rpx 50rpx;
+}
+.logout-btn>view{
+  background-color: #FBBD08;
+  width: 100%;
+  height: 70rpx;
+  font-weight: bold;
+  border-radius: 12rpx;
+}

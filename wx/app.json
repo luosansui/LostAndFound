@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/user/index",
+    "pages/details/index",
+    "pages/search/index",
+    "pages/submit/index",
+    "pages/list/index",
+    "pages/session/index",
+    "pages/developer/index",
+    "pages/agreement/index",
+    "pages/message/index",
+    "pages/about/index",
+    "pages/setting/index",
+    "pages/space/space"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "失物招领平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "/icon/home.png",
+      "selectedIconPath": "/icon/home_selected.png",
+      "text": "主页"
+    }, {
+      "pagePath": "pages/space/space",
+      "iconPath": "/icon/submit.png",
+      "selectedIconPath": "/icon/submit.png"
+    },{
+      "pagePath": "pages/user/index",
+      "iconPath": "/icon/user.png",
+      "selectedIconPath": "/icon/user_selected.png",
+      "text": "个人"
+    }]
+  },
+  "usingComponents": {},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于添加地址"
+    }
+  }
+}
